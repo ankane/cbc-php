@@ -1,0 +1,36 @@
+{
+    "name": "ankane/cbc",
+    "description": "Mixed-integer programming for PHP",
+    "license": "EPL-2.0",
+    "support": {
+        "issues": "https://github.com/ankane/cbc-php/issues",
+        "source": "https://github.com/ankane/cbc-php"
+    },
+    "authors": [
+        {
+            "name": "Andrew Kane",
+            "email": "andrew@ankane.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Cbc\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">= 8.2",
+        "ext-ffi": ">= 8.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11"
+    },
+    "scripts": {
+        "test": "phpunit tests",
+        "valgrind": "valgrind --leak-check=full --trace-children=yes --error-exitcode=1 --quiet phpunit tests"
+    }
+}
